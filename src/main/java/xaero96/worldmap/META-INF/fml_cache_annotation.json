@@ -1,0 +1,691 @@
+{
+  "xaero/common/api/spigot/message/MessageWaypoint": {
+    "name": "xaero/common/api/spigot/message/MessageWaypoint",
+    "interfaces": [
+      "java/lang/Runnable"
+    ]
+  },
+  "xaero/common/api/spigot/message/in/InMessageWaypoint": {
+    "name": "xaero/common/api/spigot/message/in/InMessageWaypoint",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "xaero/common/api/spigot/message/in/InMessageWaypoint$Handler": {
+    "name": "xaero/common/api/spigot/message/in/InMessageWaypoint$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "xaero/common/api/spigot/message/out/OutMessageHandshake$Handler": {
+    "name": "xaero/common/api/spigot/message/out/OutMessageHandshake$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "xaero/common/api/spigot/message/out/OutMessageWaypoint": {
+    "name": "xaero/common/api/spigot/message/out/OutMessageWaypoint",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessage"
+    ]
+  },
+  "xaero/common/api/spigot/message/out/OutMessageWaypoint$Handler": {
+    "name": "xaero/common/api/spigot/message/out/OutMessageWaypoint$Handler",
+    "interfaces": [
+      "net/minecraftforge/fml/common/network/simpleimpl/IMessageHandler"
+    ]
+  },
+  "xaero/common/core/XaeroMinimapPlugin": {
+    "name": "xaero/common/core/XaeroMinimapPlugin",
+    "interfaces": [
+      "net/minecraftforge/fml/relauncher/IFMLLoadingPlugin"
+    ],
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$MCVersion;",
+        "target": "xaero/common/core/XaeroMinimapPlugin",
+        "value": {
+          "value": "1.12.2"
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$TransformerExclusions;",
+        "target": "xaero/common/core/XaeroMinimapPlugin",
+        "value": {
+          "values": [
+            "xaero.common.core.transformer",
+            "xaero.common.core"
+          ]
+        }
+      }
+    ]
+  },
+  "xaero/common/core/transformer/ClassNodeTransformer": {
+    "name": "xaero/common/core/transformer/ClassNodeTransformer",
+    "interfaces": [
+      "net/minecraft/launchwrapper/IClassTransformer"
+    ]
+  },
+  "xaero/common/events/FMLEventHandler": {
+    "name": "xaero/common/events/FMLEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleClientTickEvent(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handlePlayerTickEvent(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleInputEvent(Lnet/minecraftforge/fml/common/gameevent/InputEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleRenderTickEvent(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V"
+      }
+    ]
+  },
+  "xaero/common/events/ForgeEventHandler": {
+    "name": "xaero/common/events/ForgeEventHandler",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleGuiOpenEvent(Lnet/minecraftforge/client/event/GuiOpenEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleRenderGameOverlayEventPre(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Pre;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleRenderGameOverlayEventPost(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleClientSendChatEvent(Lnet/minecraftforge/client/event/ClientChatEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleClientChatReceivedEvent(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleRenderWorldLastEvent(Lnet/minecraftforge/client/event/RenderWorldLastEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleDrawScreenEventPost(Lnet/minecraftforge/client/event/GuiScreenEvent$DrawScreenEvent$Post;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleTextureStitchEventPost(Lnet/minecraftforge/client/event/TextureStitchEvent$Post;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handlePlayerSetSpawnEvent(Lnet/minecraftforge/event/entity/player/PlayerSetSpawnEvent;)V"
+      }
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint": {
+    "name": "xaero/common/gui/GuiAddWaypoint",
+    "interfaces": [
+      "xaero/common/gui/IDropDownCallback"
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint$1": {
+    "name": "xaero/common/gui/GuiAddWaypoint$1",
+    "interfaces": [
+      "java/util/function/Function"
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint$2": {
+    "name": "xaero/common/gui/GuiAddWaypoint$2",
+    "interfaces": [
+      "java/util/function/Function"
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint$3": {
+    "name": "xaero/common/gui/GuiAddWaypoint$3",
+    "interfaces": [
+      "java/util/function/Function"
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint$4": {
+    "name": "xaero/common/gui/GuiAddWaypoint$4",
+    "interfaces": [
+      "java/util/function/Function"
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint$5": {
+    "name": "xaero/common/gui/GuiAddWaypoint$5",
+    "interfaces": [
+      "java/util/function/Function"
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint$6": {
+    "name": "xaero/common/gui/GuiAddWaypoint$6",
+    "interfaces": [
+      "java/util/function/Function"
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint$7": {
+    "name": "xaero/common/gui/GuiAddWaypoint$7",
+    "interfaces": [
+      "java/util/function/Function"
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint$8": {
+    "name": "xaero/common/gui/GuiAddWaypoint$8",
+    "interfaces": [
+      "java/util/function/Function"
+    ]
+  },
+  "xaero/common/gui/GuiAddWaypoint$9": {
+    "name": "xaero/common/gui/GuiAddWaypoint$9",
+    "interfaces": [
+      "java/util/function/Function"
+    ]
+  },
+  "xaero/common/gui/GuiDotColors": {
+    "name": "xaero/common/gui/GuiDotColors",
+    "interfaces": [
+      "xaero/common/gui/IDropDownCallback"
+    ]
+  },
+  "xaero/common/gui/GuiSettings": {
+    "name": "xaero/common/gui/GuiSettings",
+    "interfaces": [
+      "xaero/common/gui/widget/WidgetScreen"
+    ]
+  },
+  "xaero/common/gui/GuiTransfer": {
+    "name": "xaero/common/gui/GuiTransfer",
+    "interfaces": [
+      "xaero/common/gui/IDropDownCallback"
+    ]
+  },
+  "xaero/common/gui/GuiUpdate": {
+    "name": "xaero/common/gui/GuiUpdate",
+    "interfaces": [
+      "xaero/common/gui/widget/WidgetScreen"
+    ]
+  },
+  "xaero/common/gui/GuiWaypoints": {
+    "name": "xaero/common/gui/GuiWaypoints",
+    "interfaces": [
+      "xaero/common/gui/IDropDownCallback"
+    ]
+  },
+  "xaero/common/gui/GuiWaypointsOptions": {
+    "name": "xaero/common/gui/GuiWaypointsOptions",
+    "interfaces": [
+      "net/minecraft/client/gui/GuiYesNoCallback"
+    ]
+  },
+  "xaero/common/gui/KeySortableByOther": {
+    "name": "xaero/common/gui/KeySortableByOther",
+    "interfaces": [
+      "java/lang/Comparable"
+    ]
+  },
+  "xaero/common/gui/ModOptionButton": {
+    "name": "xaero/common/gui/ModOptionButton",
+    "interfaces": [
+      "xaero/common/gui/ModOptionWidget"
+    ]
+  },
+  "xaero/common/gui/ModOptionSlider": {
+    "name": "xaero/common/gui/ModOptionSlider",
+    "interfaces": [
+      "xaero/common/gui/ModOptionWidget"
+    ]
+  },
+  "xaero/common/gui/widget/WidgetUrlClickHandler": {
+    "name": "xaero/common/gui/widget/WidgetUrlClickHandler",
+    "interfaces": [
+      "xaero/common/gui/widget/WidgetClickHandler",
+      "net/minecraft/client/gui/GuiYesNoCallback"
+    ]
+  },
+  "xaero/common/gui/widget/init/ButtonWidgetInitializer": {
+    "name": "xaero/common/gui/widget/init/ButtonWidgetInitializer",
+    "interfaces": [
+      "xaero/common/gui/widget/init/WidgetInitializer"
+    ]
+  },
+  "xaero/common/gui/widget/render/ScalableWidgetRenderer": {
+    "name": "xaero/common/gui/widget/render/ScalableWidgetRenderer",
+    "interfaces": [
+      "xaero/common/gui/widget/render/WidgetRenderer"
+    ]
+  },
+  "xaero/common/minimap/waypoints/WaypointSharingHandler": {
+    "name": "xaero/common/minimap/waypoints/WaypointSharingHandler",
+    "interfaces": [
+      "net/minecraft/client/gui/GuiYesNoCallback"
+    ]
+  },
+  "xaero/common/misc/CustomTextFieldFontRendererWrapper$1": {
+    "name": "xaero/common/misc/CustomTextFieldFontRendererWrapper$1",
+    "interfaces": [
+      "net/minecraft/client/resources/IResource"
+    ]
+  },
+  "xaero/dev/ComboPlugin": {
+    "name": "xaero/dev/ComboPlugin",
+    "interfaces": [
+      "net/minecraftforge/fml/relauncher/IFMLLoadingPlugin"
+    ],
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$MCVersion;",
+        "target": "xaero/dev/ComboPlugin",
+        "value": {
+          "value": "1.12.2"
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$TransformerExclusions;",
+        "target": "xaero/dev/ComboPlugin",
+        "value": {
+          "values": [
+            "xaero.dev",
+            "xaero.common.core.transformer",
+            "xaero.common.core",
+            "xaero.map.core.transformer",
+            "xaero.map.core"
+          ]
+        }
+      }
+    ]
+  },
+  "xaero/map/MapProcessor": {
+    "name": "xaero/map/MapProcessor",
+    "interfaces": [
+      "java/lang/Runnable"
+    ]
+  },
+  "xaero/map/MapProcessor$1": {
+    "name": "xaero/map/MapProcessor$1",
+    "interfaces": [
+      "java/lang/Runnable"
+    ]
+  },
+  "xaero/map/MapProcessor$2": {
+    "name": "xaero/map/MapProcessor$2",
+    "interfaces": [
+      "java/lang/Runnable"
+    ]
+  },
+  "xaero/map/WorldMap": {
+    "name": "xaero/map/WorldMap",
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "xaero/map/WorldMap",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12,1.12.2]"
+          },
+          "clientSideOnly": {
+            "type": "BOOL",
+            "value": "true"
+          },
+          "modid": {
+            "value": "xaeroworldmap"
+          },
+          "name": {
+            "value": "Xaero\u0027s World Map"
+          },
+          "version": {
+            "value": "1.7.3"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$Instance;",
+        "target": "instance",
+        "value": {
+          "value": "xaeroworldmap"
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "load(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      }
+    ]
+  },
+  "xaero/map/capabilities/ServerWorldCapabilities": {
+    "name": "xaero/map/capabilities/ServerWorldCapabilities",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/ICapabilityProvider"
+    ],
+    "annotations": [
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/common/capabilities/CapabilityInject;",
+        "target": "LOADED_CAP",
+        "value": {
+          "type": "CLASS",
+          "value": "Lxaero/map/capabilities/ServerWorldLoaded;"
+        }
+      }
+    ]
+  },
+  "xaero/map/capabilities/ServerWorldCapabilities$1": {
+    "name": "xaero/map/capabilities/ServerWorldCapabilities$1",
+    "interfaces": [
+      "java/util/concurrent/Callable"
+    ]
+  },
+  "xaero/map/capabilities/ServerWorldLoaded$Storage": {
+    "name": "xaero/map/capabilities/ServerWorldLoaded$Storage",
+    "interfaces": [
+      "net/minecraftforge/common/capabilities/Capability$IStorage"
+    ]
+  },
+  "xaero/map/core/XaeroWorldMapPlugin": {
+    "name": "xaero/map/core/XaeroWorldMapPlugin",
+    "interfaces": [
+      "net/minecraftforge/fml/relauncher/IFMLLoadingPlugin"
+    ],
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$MCVersion;",
+        "target": "xaero/map/core/XaeroWorldMapPlugin",
+        "value": {
+          "value": "1.12.2"
+        }
+      },
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/relauncher/IFMLLoadingPlugin$TransformerExclusions;",
+        "target": "xaero/map/core/XaeroWorldMapPlugin",
+        "value": {
+          "values": [
+            "xaero.map.core.transformer",
+            "xaero.map.core"
+          ]
+        }
+      }
+    ]
+  },
+  "xaero/map/core/transformer/ClassNodeTransformer": {
+    "name": "xaero/map/core/transformer/ClassNodeTransformer",
+    "interfaces": [
+      "net/minecraft/launchwrapper/IClassTransformer"
+    ]
+  },
+  "xaero/map/events/Events": {
+    "name": "xaero/map/events/Events",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "guiButtonClick(Lnet/minecraftforge/client/event/GuiScreenEvent$ActionPerformedEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "guiOpen(Lnet/minecraftforge/client/event/GuiOpenEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "modelBake(Lnet/minecraftforge/client/event/TextureStitchEvent$Post;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "renderTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "renderTick(Lnet/minecraftforge/client/event/GuiScreenEvent$DrawScreenEvent$Post;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "spawnSet(Lnet/minecraftforge/event/entity/player/PlayerSetSpawnEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "worldCapabilities(Lnet/minecraftforge/event/AttachCapabilitiesEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "worldUnload(Lnet/minecraftforge/event/world/WorldEvent$Unload;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "handleRenderGameOverlayEventPost(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V"
+      }
+    ]
+  },
+  "xaero/map/events/FMLEvents": {
+    "name": "xaero/map/events/FMLEvents",
+    "annotations": [
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "playerTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "clientTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/eventhandler/SubscribeEvent;",
+        "target": "onKeyInput(Lnet/minecraftforge/fml/common/gameevent/InputEvent;)V"
+      }
+    ]
+  },
+  "xaero/map/file/RegionDetection": {
+    "name": "xaero/map/file/RegionDetection",
+    "interfaces": [
+      "xaero/map/file/MapRegionInfo"
+    ]
+  },
+  "xaero/map/graphics/TextureUpload": {
+    "name": "xaero/map/graphics/TextureUpload",
+    "interfaces": [
+      "xaero/map/pool/PoolUnit"
+    ]
+  },
+  "xaero/map/gui/GuiDimensionSettings$1": {
+    "name": "xaero/map/gui/GuiDimensionSettings$1",
+    "interfaces": [
+      "xaero/map/gui/IDropDownCallback"
+    ]
+  },
+  "xaero/map/gui/KeySortableByOther": {
+    "name": "xaero/map/gui/KeySortableByOther",
+    "interfaces": [
+      "java/lang/Comparable"
+    ]
+  },
+  "xaero/map/gui/YesNoCallbackImplementation": {
+    "name": "xaero/map/gui/YesNoCallbackImplementation",
+    "interfaces": [
+      "net/minecraft/client/gui/GuiYesNoCallback"
+    ]
+  },
+  "xaero/map/mods/gui/Waypoint": {
+    "name": "xaero/map/mods/gui/Waypoint",
+    "interfaces": [
+      "java/lang/Comparable"
+    ]
+  },
+  "xaero/map/region/MapRegion": {
+    "name": "xaero/map/region/MapRegion",
+    "interfaces": [
+      "java/lang/Comparable",
+      "xaero/map/file/MapRegionInfo"
+    ]
+  },
+  "xaero/map/region/MapTile": {
+    "name": "xaero/map/region/MapTile",
+    "interfaces": [
+      "xaero/map/pool/PoolUnit"
+    ]
+  },
+  "xaero/minimap/XaeroMinimap": {
+    "name": "xaero/minimap/XaeroMinimap",
+    "interfaces": [
+      "xaero/common/IXaeroMinimap"
+    ],
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "xaero/minimap/XaeroMinimap",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12,1.12.2]"
+          },
+          "clientSideOnly": {
+            "type": "BOOL",
+            "value": "true"
+          },
+          "modid": {
+            "value": "xaerominimap"
+          },
+          "name": {
+            "value": "Xaero\u0027s Minimap"
+          },
+          "version": {
+            "value": "20.15.3"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$Instance;",
+        "target": "instance",
+        "value": {
+          "value": "xaerominimap"
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "load(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "load(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      }
+    ]
+  },
+  "xaero/minimap/interfaces/MinimapInterfaceLoader": {
+    "name": "xaero/minimap/interfaces/MinimapInterfaceLoader",
+    "interfaces": [
+      "xaero/common/interfaces/IInterfaceLoader"
+    ]
+  },
+  "xaero/pvp/BetterPVP": {
+    "name": "xaero/pvp/BetterPVP",
+    "interfaces": [
+      "xaero/common/IXaeroMinimap"
+    ],
+    "annotations": [
+      {
+        "type": "CLASS",
+        "name": "Lnet/minecraftforge/fml/common/Mod;",
+        "target": "xaero/pvp/BetterPVP",
+        "values": {
+          "acceptedMinecraftVersions": {
+            "value": "[1.12,1.12.2]"
+          },
+          "clientSideOnly": {
+            "type": "BOOL",
+            "value": "true"
+          },
+          "modid": {
+            "value": "xaerobetterpvp"
+          },
+          "name": {
+            "value": "Better PvP"
+          },
+          "version": {
+            "value": "20.15.3"
+          }
+        }
+      },
+      {
+        "type": "FIELD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$Instance;",
+        "target": "instance",
+        "value": {
+          "value": "xaerobetterpvp"
+        }
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "load(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V"
+      },
+      {
+        "type": "METHOD",
+        "name": "Lnet/minecraftforge/fml/common/Mod$EventHandler;",
+        "target": "load(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V"
+      }
+    ]
+  },
+  "xaero/pvp/interfaces/BPVPInterfaceLoader": {
+    "name": "xaero/pvp/interfaces/BPVPInterfaceLoader",
+    "interfaces": [
+      "xaero/common/interfaces/IInterfaceLoader"
+    ]
+  }
+}
