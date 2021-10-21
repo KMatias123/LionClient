@@ -1,3 +1,5 @@
+NOTE: This is not my client, I just happened to fork it and then the owner deleted the repo. Now it is archived since I won't commit anything to it anyways.
+
 # Lion Client
 ![Discord](https://img.shields.io/discord/733319645347446803?color=brightgreen&label=Discord&logo=Discord&logoColor=brightgreen)
 ## How to use
